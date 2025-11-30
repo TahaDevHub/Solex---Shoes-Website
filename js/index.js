@@ -25,6 +25,24 @@
             
             })
 
+// =====
+// Change video path for vertical devices
+function updatesec1vid(){
+        const sec1vid=document.querySelector(".section1 video");
+        if( window.innerWidth<=786){
+                sec1vid.src="videos/index/section1V.mp4";
+        }
+        else{
+                sec1vid.src="videos/index/section1.mp4";
+        }
+}
+//Call on load and resize
+window.addEventListener("load", updatesec1vid);
+window.addEventListener("resize", updatesec1vid);
+
+
+
+
 // ======= Script Section 2 =======
 //Select Elements
         const track = document.querySelector('.carousel-track');
@@ -55,9 +73,6 @@
         index = (i + slides.length) % slides.length;
         update();
         }
-
-window.addEventListener('resize', updateCarouselImages);
-window.addEventListener('load', updateCarouselImages);
 // Next / Prev controls
         next.addEventListener('click', () => goToSlide(index + 1));
         prev.addEventListener('click', () => goToSlide(index - 1));
@@ -77,14 +92,48 @@ function updateCarouselImages() {
     slidesupdate[3].src = 'images/Index/section2 -carousel/4V.png';
     slidesupdate[4].src = 'images/Index/section2 -carousel/5V.png';
   }
+  else{
+        slidesupdate[0].src = 'images/Index/section2 -carousel/1.png';
+        slidesupdate[1].src = 'images/Index/section2 -carousel/2.png';
+        slidesupdate[2].src = 'images/Index/section2 -carousel/3.png';
+        slidesupdate[3].src = 'images/Index/section2 -carousel/4.png';
+        slidesupdate[4].src = 'images/Index/section2 -carousel/5.png';
+  }
 }
+//Call on load and resize
+window.addEventListener("load", updateCarouselImages);
+window.addEventListener("resize", updateCarouselImages);
 
+// ======= Script Section 3 =======
+function updatesection3video(){
+        const sec3vid=document.querySelector(".section3 video");
+        if(window.innerWidth<=786){
+                sec3vid.src='videos/index/section3V.mp4';
+        }
+        else{
+                sec3vid.src='videos/index/section3.mp4';
+        }
+}
+// Call on load and resize
+window.addEventListener('load', updatesection3video);
+window.addEventListener('resize', updatesection3video);
+
+// ======= Script Section 4 =======
+function updatesection4video(){
+        const sec4vid=document.querySelector(".section4 video");
+        if(window.innerWidth<=786){
+                sec4vid.src="videos/index/section4V.mp4";
+        }
+        else{
+                sec4vid.src="videos/index/section4.mp4";
+        }
+};
+//Call on load and resize
+window.addEventListener("load", updatesection4video);
+window.addEventListener("resize", updatesection4video);
 
 // ======= Script Section 5 =======
     document.querySelector("form").addEventListener("submit", (e)=>{
     e.preventDefault();
     alert("Subscribed successfully!");
-
 });
-
-

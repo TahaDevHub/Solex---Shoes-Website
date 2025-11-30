@@ -336,4 +336,16 @@
                 padding-bottom: 15px ;
                 font-size: smaller;
                 font-weight: 400;
+
             }
+
+            /* =============== Responsivenes ============ */
+@media (max-width: 786px){
+    .horizontal{
+        display: none;
+    }
+    .vertical{
+        display: block;
+        overflow: hidden;
+    }
+}

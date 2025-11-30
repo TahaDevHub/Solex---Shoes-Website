@@ -305,6 +305,7 @@
                 font-family: 'Science Gothic';
                 font-size: x-small;
                 display: flex;
+                flex-wrap: wrap;
                 width: 60%;
                 justify-content: space-between;
             }
@@ -344,7 +345,9 @@
             nav a{
         font-size: xx-small;
     }
-
+            .footer{
+        gap: 50px;
+    }
     .vpBtn{
         display: none;
     }
@@ -352,6 +355,7 @@ body, html{
             overflow-x: hidden;
 }
 }
+
 
 
 

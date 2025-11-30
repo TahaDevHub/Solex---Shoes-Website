@@ -341,6 +341,10 @@
 
             /* =============== Responsivenes ============ */
 @media (max-width : 786px){
+            nav a{
+        font-size: xx-small;
+    }
+
     .vpBtn{
         display: none;
     }
@@ -348,5 +352,6 @@ body, html{
             overflow-x: hidden;
 }
 }
+
 
 

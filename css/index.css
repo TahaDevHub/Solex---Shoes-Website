@@ -1,0 +1,339 @@
+*{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            }
+            /* ======= Scroll-Snap ======= */
+            html{scroll-snap-type: y mandatory;}
+            body{scroll-behavior: smooth;}
+            section{
+                scroll-snap-align: start; /*kis ko scroll krna*/
+                scroll-snap-stop: always; /* forces “1 snap at a time” */
+            }
+            body::-webkit-scrollbar{display: none;} /* Scrollbar hide */
+            /* ============================== */
+            body{
+                font-family: "Roboto","SUSE";
+            }
+            section{
+                position: relative;
+                height: 100vh;
+                align-items: center;
+                text-align: center;
+            }
+            /* ======== Section 1 ========= */
+            .header{
+                position: relative;
+                background: transparent;
+                backdrop-filter: blur(2px);  /*Glassy Blur effect*/
+                -webkit-backdrop-filter: blur(2px);  /*Glassy Blur effect*/
+                height: 18vh;
+                width: 100%;
+                display: flex;
+                justify-content:left;
+                align-items: center;
+                z-index: 10;
+            }
+            .logo a img{
+                transition: 0.3s ease-in-out;
+                transform: rotate(-10deg);
+            }
+            .logo:hover a img{
+                transform: scale(1.25) rotateY(180deg);
+            }
+            .logo img{
+                width: 10vw;
+                margin-left: 2vw;
+            }
+            nav{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            nav a{
+                color: white;
+                text-decoration: none;
+                font-size: large;
+                padding: 10px;
+                border-radius: 1px;
+                font-weight:300;
+                margin:0px 10px;
+                transition: 0.22s ease-in-out;
+                display: inline-block; /*to use scale in hover*/
+            }
+            nav a:hover{
+                color: red;
+                background: #F9F9F9F9;
+                
+            }
+            .cartdiv{
+                display: inline;
+                margin-right: 20px;
+                position: absolute;
+                right: 0;
+                transition: 0.2s ease-in-out;
+                border-radius:3px ; 
+            }
+            .carticon{
+                color: white;
+                font-size: x-large;
+                padding: 10px;
+                transition: 0.1s ease-in-out;
+            }
+            .cartdiv:hover .carticon{
+                color: red;
+                transform: scale(1.01);
+            }
+
+            .videodiv{
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 0;
+                height: 100vh;
+                width:100%;
+                overflow: hidden;
+            }
+            video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .vpBtn{
+                display:block;
+                position: absolute;
+                right: 0%;
+                margin:0 15px 3% 0; 
+                bottom:0%;
+            }
+            .pause{
+                color: white;
+                background: rgba(0, 0, 0, 0.195);
+                padding: 5px;
+                text-align: center;
+                font-size: xx-large;
+                border-radius: 50%;
+                opacity: 50%;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                margin: 0px 0px 10px 0px;
+            }
+            .pause:hover{
+                opacity: 100%;
+                color: black;
+                background: white;
+            }
+            .volume{
+                color: white;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                background: rgba(0, 0, 0, 0.195);
+                display:block;
+                padding: 10px;
+                text-align: center;
+                font-size: x-large;
+                border-radius: 50%;
+                opacity: 50%;
+            }
+            .volume:hover{
+                color: black;
+                background-color: white;
+                opacity: 100%;
+            }
+            /* .section2{
+                height: 100vh;
+            } */
+
+
+            /* Section 2 */
+            /* Carousel */
+            /* Carousel */
+.carousel {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(.22,.9,.3,1);
+  height: 100%;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  opacity: 50%;
+  transition: 0.2s ease-in-out;
+}
+.control:hover{background: linear-gradient(to bottom, black,rgb(128, 40, 40)); color: gold; opacity: 100%;}
+.control-left { left: 20px; }
+.control-right { right: 20px; }
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: 1px black solid;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: gold;
+  box-shadow: 0 0 10px rgba(255,215,0,0.6);
+}
+/* ============= Section 3 ============= */
+.section3 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ============= Section 5 ============= */
+.section5{
+    background-image: url(../images/Index/section5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.newsletterdiv{
+    display: flex;
+    justify-content: center;
+    padding-top: 250px;
+}
+.newsletterdiv form{
+    padding: 30px 10px;
+    color: white;
+    width: 80%;
+    border: 1px solid rgba(255, 255, 255, 0.082);
+    border-radius: 20px;
+}
+.newsletterdiv form h2{
+    text-align: center;
+}
+.newsletterdiv form input{
+    border-left:none ;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.312);
+    border-radius: 10px;
+    padding: 10px 5px;
+    margin-top: 50px;
+    background: transparent;
+    font-family:'SUSE' ;
+    font-size: large;
+    font-weight: 250;
+    text-align: center;
+    width: 60%;
+    color: white;
+    transition: 0.1s ease-in-out;
+    
+}
+.newsletterdiv form input:focus{
+    outline: 1px solid rgba(255, 255, 255, 0.312);
+}
+#newslBtn{
+    border: none;
+    font-size: xx-large;
+    background: white;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+}
+.fa-circle-up{
+    display: inline;
+    padding: 10px 5px;
+}
+.fa-circle-up:hover{
+    color: red;
+}
+/* Section 6 */
+.section6{
+    background: black;
+}
+.section6 .trust{
+    padding: 89px;
+}
+.section6 h1{
+    color: white;
+    font-family: 'SUSE';
+    font-weight: 200;
+}
+
+/*==== Footer ====*/
+.footertopline{
+    background: rgba(250, 250, 249, 0.925);
+    min-height: 300px;
+}
+            .footer{
+                margin-top: 20px;
+                font-family: 'Science Gothic';
+                font-size: x-small;
+                display: flex;
+                width: 60%;
+                justify-content: space-between;
+            }
+            .footer_part{
+                text-align: left;
+                margin-left: 15px;
+            }
+            .footer_part a{
+                text-decoration: none;
+                color: black;
+                padding: 2px 2px;
+                transition: 0.1s ease-in-out;
+            }
+            .footer_part a:hover{
+                color: red;
+            }
+            .footer_part li {
+                font-weight: 300;
+                list-style: none;
+                margin: 5px 0px 5px 0px;
+            }
+            .footertopline{
+                border-top: 1px solid rgba(0, 0, 0, 0.16);
+                margin-top: 100px;
+            }
+            footer{
+                text-align: center;
+                background: rgba(250, 250, 249, 0.925);
+                padding-bottom: 15px ;
+                font-size: smaller;
+                font-weight: 400;
+            }

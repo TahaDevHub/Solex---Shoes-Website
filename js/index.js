@@ -14,11 +14,11 @@
             let pause=document.querySelector(".pausei");
             
             pausediv.addEventListener("click", () => {
-                if(v.play()){
-                    v.pause();
+                if(v.paused{ //v.paused is a boolean → true/false,
+                    v.play();
                 }
                 else{
-                    v.play();
+                    v.pause();
                 }
                 pause.classList.toggle("fa-circle-pause");
                     pause.classList.toggle("fa-circle-play");
@@ -27,13 +27,13 @@
 
 
 // ======= Script Section 2 =======
-
-//Select Elements
-        const track = document.querySelector('.carousel-track');
+document.querySelectorAll(".carousel").forEach((carousel) =>{
+            //Select Elements
+        const track = carousel.querySelector('.carousel-track');
         const slides = Array.from(track.children);
-        const prev = document.querySelector('.control-left');
-        const next = document.querySelector('.control-right');
-        const dotsContainer = document.querySelector('.dots');
+        const prev = carousel.querySelector('.control-left');
+        const next = carousel.querySelector('.control-right');
+        const dotsContainer = carousel.querySelector('.dots');
 
         let index = 0;
 
@@ -68,10 +68,14 @@
 // Initialize first active dot
         update();
 
+});
+
+
 
 
 // ======= Script Section 5 =======
     document.querySelector("form").addEventListener("submit", (e)=>{
     e.preventDefault();
     alert("Subscribed successfully!");
+
 });

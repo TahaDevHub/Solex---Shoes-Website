@@ -1,0 +1,168 @@
+*{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            }
+            body{
+                font-family: "Roboto","SUSE";
+            }
+            /* === Styling Scrollbar ===*/
+            ::-webkit-scrollbar{ /*Over all scrollbar*/
+                width: 5px;
+                background: rgb(255, 255, 255);
+            } 
+            ::-webkit-scrollbar-thumb{ /*jo scroll bar ka andr hai */
+                width: 100%;
+                border-radius: 2px;
+                background: linear-gradient(to bottom, rgba(255, 0, 0, 0.277), rgba(0, 0, 255, 0.294));
+            }
+            /* === Styling Scrollbar End ===*/
+            .header{
+                position: relative;
+                background: rgba(0, 0, 0, 0.845);
+                height: 15vh;
+                width: 100%;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                z-index: 10;
+            }
+            .logo{
+                margin-left: 2vw;
+                overflow: hidden;
+            }
+            .logo a img{
+                transition: 0.3s ease-in-out;
+                transform: rotate(-10deg);
+            }
+            .logo:hover a img{
+                transform: scale(1.2) rotateY(180deg);
+            }
+            .logo img{
+                width: 10vw;
+            }
+            nav{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            nav a{
+                color: white;
+                text-decoration: none;
+                font-size: large;
+                padding: 10px;
+                border-radius: 1px;
+                font-weight:300;
+                margin:0px 10px;
+                transition: 0.22s ease-in-out;
+                display: inline-block; /*to use scale in hover*/
+            }
+            nav a:hover{
+                color: red;
+                background: #F9F9F9F9;
+                
+            }
+            .cartdiv{
+                display: inline;
+                margin-right: 15px;
+                transition: 0.2s ease-in-out;
+                border-radius:3px ; 
+            }
+            .carticon{
+                color: white;
+                font-size: x-large;
+                padding: 10px;
+                transition: 0.1s ease-in-out;
+            }
+            .cartdiv:hover .carticon{
+                color: red;
+                transform: scale(1.01);
+            }
+            /*==== Footer ====*/
+            .footer{
+                margin-top: 20px;
+                margin-bottom: 200px;
+                font-family: 'Science Gothic';
+                font-size: x-small;
+                display: flex;
+                width: 60%;
+                justify-content: space-between;
+            }
+            .footer_part{
+                margin-left: 15px;
+            }
+            .footer_part a{
+                text-decoration: none;
+                color: black;
+                padding: 2px 2px;
+                transition: 0.1s ease-in-out;
+            }
+            .footer_part a:hover{
+                color: red;
+            }
+            .footer_part li {
+                font-weight: 300;
+                list-style: none;
+                margin: 5px 0px 5px 0px;
+            }
+            .footertopline{
+                border-top: 1px solid rgba(0, 0, 0, 0.16);
+                margin-top: 100px;
+            }
+            footer{
+                text-align: center;
+                background: rgba(250, 250, 249, 0.925);
+                padding-bottom: 15px ;
+                font-size: smaller;
+                font-weight: 400;
+            }
+
+            /* ======== Contact Us ======== */
+            .outercontactformdiv{
+                display: flex;
+                justify-content: center;
+            }
+            .contactformdiv{
+                display: flex;
+                width: 80%;
+                justify-content: center;
+                margin-top: 15px;
+            }
+            .contactformdiv form{
+                border: 1px solid black;
+                border-radius: 20px;
+                padding: 40px 10px;
+            }
+            .contactformdiv legend{
+                text-align: center;
+                font-family: 'dancing script';
+                font-size: xx-large;
+                font-weight: 900;
+            }
+            .contactformdiv form input{
+                font-family: 'roboto';
+                padding: 10px 5px;
+                width: 100%;
+                margin-top: 15px;
+                border: 1px solid rgba(0, 0, 0, 0.272);
+                border-radius: 5px;
+            }
+            .contactformdiv form div{
+                margin-top: 15px;
+                text-align: center;
+            }
+            .contactformdiv form div button{
+                padding:10px 5px ;
+                width: 100%;
+                font-family: 'roboto';
+                border-radius: 20px;
+                border: 1px solid green;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+            }
+            .contactformdiv form div button:hover{
+                color: white;
+                font-weight: 900;
+                background: green;
+                border: 1px solid black;
+            }

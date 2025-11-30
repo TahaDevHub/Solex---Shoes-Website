@@ -244,6 +244,7 @@
 
 /* ========== Responsiveness ========== */
 @media (max-width: 786px){
+    /* ==== */
     .carticon{
         font-size: x-small;
     }
@@ -255,8 +256,19 @@
     }
     body, html{
             overflow-x: hidden;
-    }   
+    }
+    /* ==== */
+    .newarrivaldiv{
+        display: none;
+    }
+    .card{
+        width: 90%;
+    }
+    .card_img{
+        height: 300px;
+    }
 }
+
 
 
 

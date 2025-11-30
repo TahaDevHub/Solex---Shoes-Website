@@ -238,4 +238,18 @@
             }
             .color button:hover{
                 border: 1px solid black;
+
             }
+
+/* ========== Responsiveness ========== */
+@media (max-width: 786px){
+    nav a{
+        font-size: xx-small;
+    }
+    .footer{
+        gap: 50px;
+    }
+    body, html{
+            overflow-x: hidden;
+    }   
+}

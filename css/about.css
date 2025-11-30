@@ -149,6 +149,12 @@
             }
 /* ========== Responsiveness ========== */
 @media (max-width: 786px){
+.logo img{
+        width: 2vw;
+    }
+    .carticon{
+        font-size: x-small;
+    }
     nav a{
         font-size: xx-small;
     }
@@ -162,4 +168,5 @@
         width: 100%;
     }
 }
+
 
